@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { toast } from 'react-hot-toast';
+import Swal from "sweetalert2"
+
 
 const Dashboard = () => {
 
@@ -51,6 +53,8 @@ const Dashboard = () => {
             }
         }
         // success alert
+
+        
     }
 
   return (
@@ -98,8 +102,11 @@ const Dashboard = () => {
 
                 </div>
 
-                <button className='btn btn-primary mt-4' onClick={sendMails}>Send Mail</button>
+                <center><button className='btn btn-warning m-4' onClick={sendMails}>Send Mail</button>   </center>
             </div>
+            
+            
+            
             
         </div>
     </div>
