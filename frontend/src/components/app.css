@@ -1,0 +1,6 @@
+.nav-item .active{
+    font-weight: bold;
+    color: blueviolet !important;
+    border-bottom: 2px solid blueviolet;
+  }
+ 
