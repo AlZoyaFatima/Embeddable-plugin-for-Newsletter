@@ -3,7 +3,7 @@ import React from "react"
 import Swal from "sweetalert2"
 import './plugin.css';
 
-const Plugin = () => {
+const Plugin = ({ownerId}) => {
 
 
   const userSubmit = async (formdata, { setSubmitting }) => {
@@ -41,7 +41,7 @@ const Plugin = () => {
         <div className="row text-center justify-content-center ">
           
           <div className="col-2 ">
-            <Formik initialValues={{ name: '', email: '', createdAt: new Date() }} onSubmit={userSubmit}>
+            <Formik initialValues={{ name: '', email: '', ownerid: ownerId, createdAt: new Date() }} onSubmit={userSubmit}>
               {({ values, handleSubmit, handleChange }) => (
                 <form onSubmit={handleSubmit} className="myform2" action="">
                   <h3 className='p-3'>Plugin</h3>

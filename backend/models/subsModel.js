@@ -1,9 +1,9 @@
-const { Schema, model } = require('../connection');
+const { Schema, model, Types } = require('../connection');
 
 const myschema = new Schema({
     name : String,
     email : String,
-    ownerid : String,
+    ownerid : {type : Types.ObjectId, ref: 'users'},
     createdAt : Date
 });
 

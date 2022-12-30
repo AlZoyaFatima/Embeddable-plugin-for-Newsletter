@@ -37,8 +37,8 @@ router.get('/getall', (req, res) => {
   })
 
 
-  router.get('/getbyname/:name', (req, res) => {
-    Model.findOne({name: req.params.name}) 
+  router.get('/getbyowner/:id', (req, res) => {
+    Model.find({ownerid: req.params.id}) 
     .then((result) => {
         res.json(result);
     }).catch((err) => {
